@@ -6,17 +6,20 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		758C933A2ED518570084DC4D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 758C93372ED518570084DC4D /* Assets.xcassets */; };
+		758C933B2ED518570084DC4D /* AdageApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 758C93362ED518570084DC4D /* AdageApp.swift */; };
+		758C933C2ED518570084DC4D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 758C93382ED518570084DC4D /* ContentView.swift */; };
+		758C933E2ED518C30084DC4D /* PhraseContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 758C933D2ED518C30084DC4D /* PhraseContext.swift */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		758C93282ED516A40084DC4D /* Adage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Adage.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		758C93362ED518570084DC4D /* AdageApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdageApp.swift; sourceTree = "<group>"; };
+		758C93372ED518570084DC4D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		758C93382ED518570084DC4D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		758C933D2ED518C30084DC4D /* PhraseContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhraseContext.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
-
-/* Begin PBXFileSystemSynchronizedRootGroup section */
-		758C932A2ED516A40084DC4D /* Adage */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = Adage;
-			sourceTree = "<group>";
-		};
-/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		758C93252ED516A40084DC4D /* Frameworks */ = {
@@ -32,7 +35,7 @@
 		758C931F2ED516A40084DC4D = {
 			isa = PBXGroup;
 			children = (
-				758C932A2ED516A40084DC4D /* Adage */,
+				758C93392ED518570084DC4D /* Adage */,
 				758C93292ED516A40084DC4D /* Products */,
 			);
 			sourceTree = "<group>";
@@ -43,6 +46,17 @@
 				758C93282ED516A40084DC4D /* Adage.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		758C93392ED518570084DC4D /* Adage */ = {
+			isa = PBXGroup;
+			children = (
+				758C93372ED518570084DC4D /* Assets.xcassets */,
+				758C93362ED518570084DC4D /* AdageApp.swift */,
+				758C93382ED518570084DC4D /* ContentView.swift */,
+				758C933D2ED518C30084DC4D /* PhraseContext.swift */,
+			);
+			path = Adage;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -59,9 +73,6 @@
 			buildRules = (
 			);
 			dependencies = (
-			);
-			fileSystemSynchronizedGroups = (
-				758C932A2ED516A40084DC4D /* Adage */,
 			);
 			name = Adage;
 			packageProductDependencies = (
@@ -109,6 +120,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				758C933A2ED518570084DC4D /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -119,6 +131,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				758C933B2ED518570084DC4D /* AdageApp.swift in Sources */,
+				758C933E2ED518C30084DC4D /* PhraseContext.swift in Sources */,
+				758C933C2ED518570084DC4D /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
