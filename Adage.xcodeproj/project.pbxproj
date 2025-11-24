@@ -53,10 +53,26 @@
 			children = (
 				758C93372ED518570084DC4D /* Assets.xcassets */,
 				758C93362ED518570084DC4D /* AdageApp.swift */,
-				758C93382ED518570084DC4D /* ContentView.swift */,
-				758C933D2ED518C30084DC4D /* PhraseContext.swift */,
+				758C93402ED51A400084DC4D /* View */,
+				758C933F2ED51A1B0084DC4D /* Model */,
 			);
 			path = Adage;
+			sourceTree = "<group>";
+		};
+		758C933F2ED51A1B0084DC4D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				758C933D2ED518C30084DC4D /* PhraseContext.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		758C93402ED51A400084DC4D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				758C93382ED518570084DC4D /* ContentView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
