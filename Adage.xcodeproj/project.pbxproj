@@ -11,6 +11,7 @@
 		758C933B2ED518570084DC4D /* AdageApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 758C93362ED518570084DC4D /* AdageApp.swift */; };
 		758C933C2ED518570084DC4D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 758C93382ED518570084DC4D /* ContentView.swift */; };
 		758C933E2ED518C30084DC4D /* PhraseContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 758C933D2ED518C30084DC4D /* PhraseContext.swift */; };
+		758C93422ED65CAE0084DC4D /* Phrase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 758C93412ED65CAE0084DC4D /* Phrase.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		758C93372ED518570084DC4D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		758C93382ED518570084DC4D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		758C933D2ED518C30084DC4D /* PhraseContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhraseContext.swift; sourceTree = "<group>"; };
+		758C93412ED65CAE0084DC4D /* Phrase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Phrase.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 			isa = PBXGroup;
 			children = (
 				758C933D2ED518C30084DC4D /* PhraseContext.swift */,
+				758C93412ED65CAE0084DC4D /* Phrase.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -149,6 +152,7 @@
 			files = (
 				758C933B2ED518570084DC4D /* AdageApp.swift in Sources */,
 				758C933E2ED518C30084DC4D /* PhraseContext.swift in Sources */,
+				758C93422ED65CAE0084DC4D /* Phrase.swift in Sources */,
 				758C933C2ED518570084DC4D /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
