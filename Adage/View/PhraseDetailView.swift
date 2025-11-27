@@ -8,8 +8,13 @@
 import SwiftUI
 
 struct PhraseDetailView: View {
+  //@State private var phrase: Phrase
+  @State private var title = ""
+  @State private var context = PhraseContext.daily
+  @State private var example = ""
+  
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+      
     }
 }
 
