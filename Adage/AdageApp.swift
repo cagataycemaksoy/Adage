@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+//import SwiftData
 
 @main
 struct AdageApp: App {
@@ -13,5 +14,6 @@ struct AdageApp: App {
         WindowGroup {
             ContentView()
         }
+       // .modelContainer(for: Phrase.self)
     }
 }

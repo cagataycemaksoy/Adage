@@ -6,10 +6,10 @@
 //
 
 import Foundation
-import SwiftData
+//import SwiftData
 
-@MainActor
-@Model
+//@MainActor
+//@Model
 class Phrase {
   var learned: String
   var context: PhraseContext
@@ -24,7 +24,7 @@ class Phrase {
 
 
 
-
+/*
 extension Phrase {
   static var preview: ModelContainer {
     guard let container = try? ModelContainer(for: Phrase.self, configurations: ModelConfiguration(isStoredInMemoryOnly: true)) else {
@@ -37,3 +37,5 @@ extension Phrase {
     return container
   }
 }
+*/
+
