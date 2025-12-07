@@ -6,14 +6,14 @@
 //
 
 import SwiftUI
-//import SwiftData
+import SwiftData
 
 @main
 struct AdageApp: App {
-    var body: some Scene {
-        WindowGroup {
-            ContentView()
-        }
-       // .modelContainer(for: Phrase.self)
+  var body: some Scene {
+    WindowGroup {
+      PhraseListView()
     }
+    .modelContainer(for: Phrase.self)
+  }
 }

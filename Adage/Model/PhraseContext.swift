@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum PhraseContext: String, CaseIterable {
+enum PhraseContext: String, CaseIterable, Codable {
   case daily = "Daily"
   case business = "Business"
   case academic = "Academic"
