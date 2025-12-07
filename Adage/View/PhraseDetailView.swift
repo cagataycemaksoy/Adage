@@ -9,7 +9,7 @@ import SwiftUI
 import SwiftData
 
 struct PhraseDetailView: View {
-  @Environment(\.modelContext) var modelContext
+  @Environment(\.modelContext) private var modelContext
   @Environment(\.dismiss) var dismiss
   
   @State var phrase: Phrase
