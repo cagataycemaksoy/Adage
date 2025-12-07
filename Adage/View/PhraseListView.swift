@@ -17,10 +17,22 @@ struct PhraseListView: View {
           NavigationLink {
             PhraseDetailView(phrase: phrase)
           } label: {
-            Text(phrase.learned)
+            HStack {
+              Text(phrase.learned)
+                .font(Font.custom("Georgia", size: 18))
+                .minimumScaleFactor(0.7)
+                .lineLimit(1)
+              
+              Spacer()
+              
+              Image(systemName: phrase.isMarked ? "bookmark" : "bookmark.fill")
+                
+            }
           }
 
         }
+        .navigationTitle("Phrases")
+        
       }
     }
 }
