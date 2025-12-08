@@ -56,6 +56,9 @@ struct PhraseListView: View {
                 Spacer()
                 
                 Image(systemName: phrase.isMarked ? "bookmark.fill" : "bookmark")
+                  .onTapGesture {
+                    phrase.isMarked.toggle()
+                  }
               }
             }
             .swipeActions {
