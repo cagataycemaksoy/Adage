@@ -9,14 +9,28 @@ import SwiftUI
 import SwiftData
 
 struct PhraseListView: View {
+  enum ListSelectionOption: String {
+    case all = "All"
+    case bookmarked = "Bookmarked"
+  }
+  
   @Query private var phrases: [Phrase]
   @Environment(\.modelContext) private var modelContext
+  
   @State private var sheetPresented = false
+  @State private var listSelection: ListSelectionOption = .all
+  
+  private var selectedList: [Phrase] {
+    switch listSelection {
+    case .all: return phrases
+    case .bookmarked: return phrases.filter{ $0.isMarked }
+    }
+  }
   
     var body: some View {
       NavigationStack {
         
-        List(phrases) { phrase in
+        List(selectedList) { phrase in
           NavigationLink {
             PhraseDetailView(phrase: phrase)
           } label: {
