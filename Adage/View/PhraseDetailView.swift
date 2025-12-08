@@ -27,6 +27,7 @@ struct PhraseDetailView: View {
       Text("Phrase:")
         .font(Font.custom("Georgia", size: 22))
         .bold()
+        .padding(.top)
       
       TextField("The phrase ...", text: $title)
         .textFieldStyle(.roundedBorder)

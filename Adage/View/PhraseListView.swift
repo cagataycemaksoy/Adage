@@ -9,7 +9,7 @@ import SwiftUI
 import SwiftData
 
 struct PhraseListView: View {
-  enum ListSelectionOption: String {
+  enum ListSelectionOption: String, CaseIterable {
     case all = "All"
     case bookmarked = "Bookmarked"
   }
@@ -29,6 +29,13 @@ struct PhraseListView: View {
   
     var body: some View {
       NavigationStack {
+        
+        Picker("", selection: $listSelection) {
+          ForEach(ListSelectionOption.allCases, id: \.self) { option in
+            Text(option.rawValue)
+          }
+        }
+        .pickerStyle(.segmented)
         
         List(selectedList) { phrase in
           NavigationLink {
@@ -55,6 +62,7 @@ struct PhraseListView: View {
             }
           }
         }
+        .listStyle(.plain)
         .navigationTitle("Phrases")
         .sheet(isPresented: $sheetPresented) {
           NavigationStack {
