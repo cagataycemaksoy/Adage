@@ -30,40 +30,47 @@ struct PhraseListView: View {
     var body: some View {
       NavigationStack {
         
-        Picker("", selection: $listSelection) {
-          ForEach(ListSelectionOption.allCases, id: \.self) { option in
-            Text(option.rawValue)
-          }
-        }
-        .pickerStyle(.segmented)
-        
-        List(selectedList) { phrase in
-          NavigationLink {
-            PhraseDetailView(phrase: phrase)
-          } label: {
-            HStack {
-              Text(phrase.learned)
-                .font(Font.custom("Georgia", size: 18))
-                .minimumScaleFactor(0.7)
-                .lineLimit(1)
-              
-              Spacer()
-              
-              Image(systemName: phrase.isMarked ? "bookmark.fill" : "bookmark")
+        VStack(alignment: .leading){
+          Text("Phrases")
+            .font(Font.custom("Georgia", size: 38))
+            .bold()
+          
+          Picker("", selection: $listSelection) {
+            ForEach(ListSelectionOption.allCases, id: \.self) { option in
+              Text(option.rawValue)
             }
           }
-          .swipeActions {
-            Button("", systemImage: "trash", role: .destructive) {
-              modelContext.delete(phrase)
-              guard let _ = try? modelContext.save() else {
-                print("😡 Failed to delete the data!")
-                return
+          .pickerStyle(.segmented)
+          .padding(.bottom)
+          
+          List(selectedList) { phrase in
+            NavigationLink {
+              PhraseDetailView(phrase: phrase)
+            } label: {
+              HStack {
+                Text(phrase.learned)
+                  .font(Font.custom("Georgia", size: 18))
+                  .minimumScaleFactor(0.7)
+                  .lineLimit(1)
+                
+                Spacer()
+                
+                Image(systemName: phrase.isMarked ? "bookmark.fill" : "bookmark")
+              }
+            }
+            .swipeActions {
+              Button("", systemImage: "trash", role: .destructive) {
+                modelContext.delete(phrase)
+                guard let _ = try? modelContext.save() else {
+                  print("😡 Failed to delete the data!")
+                  return
+                }
               }
             }
           }
+          .listStyle(.plain)
         }
-        .listStyle(.plain)
-        .navigationTitle("Phrases")
+        .padding(.horizontal)
         .sheet(isPresented: $sheetPresented) {
           NavigationStack {
             PhraseDetailView(phrase: Phrase())
