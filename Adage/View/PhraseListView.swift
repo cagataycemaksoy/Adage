@@ -9,11 +9,6 @@ import SwiftUI
 import SwiftData
 
 struct PhraseListView: View {
-  enum ListSelectionOption: String, CaseIterable {
-    case all = "All"
-    case bookmarked = "Bookmarked"
-  }
-  
   @Query private var phrases: [Phrase]
   @Environment(\.modelContext) private var modelContext
   
