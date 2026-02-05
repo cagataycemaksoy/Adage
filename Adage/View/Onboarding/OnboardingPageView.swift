@@ -16,18 +16,13 @@ struct OnboardingPageView: View {
   let buttonAction: () -> Void
   
     var body: some View {
-      ZStack {
-        LinearGradient(colors: [.color1.opacity(0.4), .color1.opacity(0.5)],
-                       startPoint: .topLeading,
-                       endPoint: .bottom)
-        .ignoresSafeArea()
-        
         VStack {
           Spacer()
           
           Text(title)
             .font(Font.custom("Georgia", size: 38))
             .multilineTextAlignment(.center)
+            .frame(width: 360)
             .padding()
           
           Spacer()
@@ -46,6 +41,7 @@ struct OnboardingPageView: View {
             .frame(width: 320)
             .padding(.bottom, 30)
           
+          //TODO: Depending on the other elements, the location of the button on the screen changes. Fix it with the GeoReader
           Button(lastView ? "Get Started" : "Next", action: buttonAction)
             .tint(.black)
             .buttonStyle(.bordered)
@@ -55,9 +51,6 @@ struct OnboardingPageView: View {
           Spacer()
           Spacer()
         }
-        
-        
-      }
     }
 }
 
