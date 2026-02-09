@@ -13,6 +13,7 @@ struct PhraseListView: View {
   @Environment(\.modelContext) private var modelContext
   
   @State private var sheetPresented = false
+  @State private var showOnboarding = true
   @State private var listSelection: ListSelectionOption = .all
   
   private var selectedList: [Phrase] {
@@ -81,6 +82,11 @@ struct PhraseListView: View {
             }
             .buttonStyle(.borderedProminent)
             .tint(.black)
+          }
+        }
+        .fullScreenCover(isPresented: $showOnboarding) {
+          NavigationStack {
+            OnboardingView(showOnboarding: $showOnboarding)
           }
         }
         

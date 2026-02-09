@@ -9,6 +9,7 @@ import SwiftUI
 
 struct OnboardingView: View {
   @State private var selectedView = 0
+  @Binding var showOnboarding: Bool
   
   var body: some View {
     ZStack {
@@ -30,8 +31,17 @@ struct OnboardingView: View {
       }
       .tabViewStyle(.page(indexDisplayMode: .always))
       .indexViewStyle(.page(backgroundDisplayMode: .always))
-      
     }
+    .toolbar {
+      ToolbarItem(placement: .topBarTrailing) {
+        Button("Skip") {
+          showOnboarding = false
+        }
+        .tint(.color1)
+        .buttonStyle(.borderedProminent)
+      }
+    }
+    
   }
   
   private func buttonAction() {
@@ -39,12 +49,13 @@ struct OnboardingView: View {
       if selectedView < 2 {
         selectedView += 1
       } else {
-        selectedView = 0
+        showOnboarding = false 
       }
     }
   }
+  
 }
 
 #Preview {
-    OnboardingView()
+  OnboardingView(showOnboarding: .constant(false))
 }
