@@ -37,7 +37,7 @@ struct OnboardingView: View {
         Button("Skip") {
           showOnboarding = false
         }
-        .tint(.color1)
+        .tint(.black)
         .buttonStyle(.borderedProminent)
       }
     }
